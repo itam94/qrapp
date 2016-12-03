@@ -26,7 +26,7 @@ public class Database {
 		}
 
 		try {
-			String url = "jdbc:mysql://"+"OPENSHIFT_MYSQL_DB_HOST"+":3306/qrapp";
+			String url = "jdbc:mysql://127.10.248.2:3306/grapps";
 			String username = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 			String password = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
 			conn = DriverManager.getConnection(url, username, password);
