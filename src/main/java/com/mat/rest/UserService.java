@@ -71,7 +71,7 @@ public class UserService {
 			
 			User usr = mapper.readValue(incomingData, User.class);
 			
-			userExist = database.createUserDatabase(usr.getLogin(),usr.getPassword(),usr.getMail());
+			userExist = database.createUserDatabases(usr.getLogin(),usr.getPassword(),usr.getMail());
 			
 			if(userExist){
 				response.put("status", "userExists");

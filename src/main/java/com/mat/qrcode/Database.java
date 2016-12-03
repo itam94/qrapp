@@ -36,7 +36,7 @@ public class Database {
 
 	}
 
-	public boolean createUserDatabase(String login, String password, String email) {
+	public boolean createUserDatabases(String login, String password, String email) {
 		boolean userExists = false; //asdgsad
 		String createQuestonaire[] = new String[5];
 		createQuestonaire[0] = "CREATE DATABASE " + login + ";";
