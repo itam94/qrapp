@@ -46,7 +46,7 @@ public class Database {
 		createQuestonaire[4] = "CREATE TABLE IF NOT EXISTS house (room varchar(30), longitude1 varchar(20), latitude1 varchar(20), longitude2 varchar(20), latitude2 varchar(20));";
 		
 		if (conn == null){
-			return false;
+			return true;
 		}
 		try {
 			for (int i = 0; i < createQuestonaire.length; i++) {
