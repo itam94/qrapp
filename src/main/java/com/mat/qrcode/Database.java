@@ -26,7 +26,7 @@ public class Database {
 		}
 
 		try {
-			String url = "jdbc:mysql://127.10.248.2:3306/qrapp";
+			String url = "jdbc:mysql://"+"OPENSHIFT_MYSQL_DB_HOST"+":3306/qrapp";
 			String username = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
 			String password = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
 			conn = DriverManager.getConnection(url, username, password);
@@ -44,7 +44,10 @@ public class Database {
 		createQuestonaire[2] = "CREATE TABLE IF NOT EXISTS qrPoints (id INTEGER PRIMARY KEY AUTO_INCREMENT, qrcode varchar(20), room varchar(20), longitude varchar(15), latitude varchar(15));";
 		createQuestonaire[3] = "CREATE TABLE IF NOT EXISTS userData (login varchar(20), password varchar(20),email varchar(40));";
 		createQuestonaire[4] = "CREATE TABLE IF NOT EXISTS house (room varchar(30), longitude1 varchar(20), latitude1 varchar(20), longitude2 varchar(20), latitude2 varchar(20));";
-
+		
+		if (conn == null){
+			return false;
+		}
 		try {
 			for (int i = 0; i < createQuestonaire.length; i++) {
 				if(!userExists){
