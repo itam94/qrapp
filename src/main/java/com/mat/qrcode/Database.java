@@ -184,8 +184,8 @@ public qrCode showQRCode(String login, int lookingObject) {
 				longitude2 =Double.parseDouble(rooms.getString("longitude2"));
 				latitude1 = Double.parseDouble(rooms.getString("latitude1"));
 				latitude2 = Double.parseDouble(rooms.getString("latitude2"));
-				if(longitudeSrc > longitude1 && longitudeSrc < longitude2 || longitudeSrc < longitude1 && longitudeSrc > longitude2){
-					if(latitudeSrc < latitude1 && latitudeSrc > latitude2 || latitudeSrc > latitude1 && latitudeSrc < latitude2 ){
+				if(longitudeSrc >= longitude1 && longitudeSrc <= longitude2 || longitudeSrc <= longitude1 && longitudeSrc >= longitude2){
+					if(latitudeSrc <= latitude1 && latitudeSrc >= latitude2 || latitudeSrc >= latitude1 && latitudeSrc <= latitude2 ){
 						return rooms.getString("room");
 					}
 				}
