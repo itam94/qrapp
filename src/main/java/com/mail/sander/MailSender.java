@@ -33,7 +33,7 @@ public class MailSender {
 	        mailProps.put("mail.smtp.port", "587");
 	        mailProps.put("mail.smtp.auth", "true");
 	        
-	        final PasswordAuthentication usernamePassword = new PasswordAuthentication("mailsiedlce@gmail.com","hakunamatata12");
+	        final PasswordAuthentication usernamePassword = new PasswordAuthentication("***********","***********");
 	        Authenticator auth = new Authenticator(){
 	            @Override
 	            protected PasswordAuthentication getPasswordAuthentication(){
